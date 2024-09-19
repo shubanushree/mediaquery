@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwVoNjlFp_x4PwU11Ma8Ppv3gHWHahoZ13PQ&s') no-repeat center center fixed;
+    background-size: cover;
+}
+.login-container {
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 550px;
+}
+h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+.input-field {
+    margin-bottom: 15px;
+}
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: white;
+    font-size: 16px;
+}
+.input-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: white;
+    font-size: 16px;
+}
+.input-field input::placeholder {
+    color: white;
+}
+.input-field textarea::placeholder {
+    color: white;
+}
+.radio-button{
+    margin-bottom: 15px;
+    
+}
+.radio-button label{
+    color: white;
+}
+.radio-button input {
+        margin-left: 20px;
+}
+.checkbox-button{
+    margin-bottom: 15px;
+    
+}
+.checkbox-button label{
+    color: white;
+}
+.checkbox-button input {
+        margin-left: 20px;
+}
+.select-button{
+    margin-bottom: 15px;
+}
+.select-button select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: white;
+    font-size: 16px;
+}
+.select-button option{
+    color: black;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 123, 255, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: rgba(0, 123, 255, 1); 
+}
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+.register-link p {
+    color: white;
+}
+.register-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+.register-link a:hover {
+    text-decoration: underline;
+}
+@media (min-width: 768px) {
+    body {
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvUqhpFKuPfdSb4GGKMzXWKelLT6d-aC58jg&s') no-repeat center center fixed;
+    background-size: cover;
+  }
+    .login-container {
+        width: 450px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYskyEIyYrIzYmFvAR-HKMpIxj969RA9YpkXQcI5cZ6JSkmZolSgLDXakcv3WWB4CljsI&usqp=CAU') no-repeat center center fixed;
+        background-size: cover;
+    }
+    .login-container {
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    body{
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_EZ7L-Ehpd731tmz0hklIq_IteOi2tb4R6Q&s') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .login-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .input-field input, 
+    .input-field textarea, 
+    .select-button select, 
+    button {
+        font-size: 14px;
+    }
+
+    .radio-button label,
+    .checkbox-button label {
+        font-size: 14px;
+    }
+    
+    button {
+        padding: 8px;
+    }
+}
+
+</style>
+<body>
+    <div class="login-container">
+        <h2>Registration</h2>
+        <form>
+            <div class="input-field">
+                <input type="text" id="fname" name="fname" placeholder="First Name" required>
+            </div>
+            <div class="input-field">
+                <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+            </div>
+            <div class="input-field">
+                <input type="text" id="username" name="username" placeholder="User Name" required>
+            </div>
+            <div class="input-field">
+                <input type="email" id="email" name="email" placeholder="Email Id" required>
+            </div>
+            <div class="input-field">
+                <input type="password" id="password" name="password" placeholder="password" required>
+            </div>
+            <div class="input-field">
+                <input type="date" id="dob" name="dob" placeholder="Date Of Birth" required>
+            </div>
+            <div class="radio-button">
+                <label for="gender">Gender:</label>
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female" required>
+                <label for="female">Female</label>
+            </div>
+            <div class="input-field">
+                <input type="number" id="phone" name="phone" placeholder="Phone Number" required>
+            </div>
+            <div class="input-field">
+            <textarea id="address" name="address" placeholder="Address"></textarea>
+            </div>
+            <div class="select-button">
+                <select name="city" id="city" required>
+                    <option value="select city">Select City</option>
+                    <option value="Theni">Theni</option>
+                    <option value="Madurai">Madurai</option>
+                    <option value="Salem">Salem</option>
+                    <option value="Coimbatore">Coimbatore</option>
+                    <option value="Dindigul">Dindigul</option>
+                </select>
+            </div>
+            <button type="submit">Register</button>
+            <div class="register-link">
+                <p>Already have an account? <a href="index.html">Login</a></p>
+            </div>
+        </form>
+    </div>
